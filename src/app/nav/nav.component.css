@@ -1,0 +1,28 @@
+a
+{
+    text-decoration: none;
+    margin: 0 .4rem;
+    color:white;
+    
+}
+.aqua
+{
+    color:#24baef;
+    font-weight: 600;
+}
+.activatee
+{
+    
+color:#24baef !important ;
+    
+}
+.fab:hover
+{
+    color:#24baef;
+}
+.navbar
+{
+    z-index: 100;
+    background-color:rgb(25, 25, 27) 
+    
+}

@@ -1,0 +1,30 @@
+<div class="row mt-5  ">
+    <div class="col-md-4">
+        <div>
+            <img class="w-100" [src]="imgPrefix+selectedMovie?.poster_path" alt="">
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <h2>{{selectedMovie?.title}}</h2>
+            <div class="d-flex mt-4">
+
+                <h6 class=" rounded-2 p-1">{{selectedMovie?.genres[1].name}}</h6>
+                <h6 class="mx-4 rounded-2 p-1">{{selectedMovie?.genres[2].name}}</h6>
+                <!-- <h6 *ngIf="selectedMovie?.genres[3].name" class=" rounded-2 p-1">{{selectedMovie?.genres[3].name}}</h6>
+                <h6 *ngIf="selectedMovie?.genres[4].name" class=" rounded-2 p-1">{{selectedMovie?.genres[4].name}}</h6> -->
+            </div>
+            <p class="secondColor">{{selectedMovie?.overview}}</p>
+            <p>Rating: {{selectedMovie?.vote_average}} <span><i class="fas  fa-star"></i></span> </p>
+            <p>Popularity: {{selectedMovie?.popularity}}</p>
+            <p>Vote Count: {{selectedMovie?.vote_count}}</p>
+            <p>Release Date: {{selectedMovie?.release_date}}</p>
+            <p>Run time: {{selectedMovie?.runtime}} min</p>
+
+
+
+        </div>
+
+    </div>
+
+</div>

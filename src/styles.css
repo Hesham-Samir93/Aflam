@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+body
+{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color:#131722;
+    background-image: url(assets\115525650931qmoa4pk9k.jpg);
+    background-size: 100% 100%;
+    color:white;
+}
+input
+{
+    color: white !important;
+}

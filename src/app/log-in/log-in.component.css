@@ -1,0 +1,42 @@
+.btncolor
+{
+    background-color:#24baef;
+}
+span
+{
+    color: #24baef;;
+}
+.alert-failed
+{
+    background-color:red;
+    color:white;
+    width:25%;
+    position: absolute;
+    top:2rem;
+    right :2rem;
+    z-index: 4444!important;
+}
+.alert-success
+{
+    background-color:rgb(10, 168, 10);
+    color:white;
+    width:25%;
+    position: absolute;
+    top:2rem;
+    right :2rem;
+    z-index: 4444!important;
+}
+
+a
+{
+    color:aqua
+}
+i
+{
+ color:white;
+ position:absolute;
+ top: 5px;
+ right:5px;
+ cursor: pointer;
+
+}

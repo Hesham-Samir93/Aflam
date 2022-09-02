@@ -1,0 +1,43 @@
+<div  *ngIf="error "  class="alert alert-failed   mt-5 "> 
+    <i (click)="closeAlert()" class="fas fa-times"></i>
+    
+   {{error}}</div>
+
+ 
+
+<form [formGroup]='loginForm' class="mt-5 text-white" (ngSubmit)="submitform(loginForm)">
+  
+
+
+    <h2 class="h1 text-center" my-5><span class="h1">L</span>ogn Now </h2>
+   
+     
+     
+
+      <div class="mb-4">
+        <label  class="form-label">Email</label>
+        <input [class.is-invalid]="loginForm.controls.email.invalid&&loginForm.controls.email.value" [class.is-valid]="loginForm.controls.email.valid"  formControlName="email" type="text" class="form-control bg-transparent" placeholder="enter email">
+      </div>
+      <div *ngIf="loginForm.get('email')?.errors  && loginForm.get('email')?.touched ||loginForm.get('email')?.value " class="text-danger mt-2 ">
+
+        <p  *ngIf="loginForm.get('email')?.errors?.required" >*email is Required</p>
+        <p  *ngIf="loginForm.get('email')?.errors?.email" >* email is not valid</p>
+
+      </div>
+      
+      <div class="mb-4">
+        <label  class="form-label">Password</label>
+        <input [class.is-invalid]="loginForm.controls.password.invalid&&loginForm.controls.password.value" [class.is-valid]="loginForm.controls.password.valid" formControlName="password" type="text" class="form-control bg-transparent" placeholder="enter password">
+      </div>
+      <div *ngIf="loginForm.get('password')?.errors  && loginForm.get('password')?.touched || loginForm.get('password')?.value " class="text-danger mt-2 ">
+        <p  *ngIf="loginForm.get('password')?.errors?.required" >*password is Required</p>
+        <p  *ngIf="loginForm.get('password')?.errors?.pattern" >* password must be at least 8 char or numbers max 15</p>
+
+      </div>
+
+      <p>Don't have account? <a routerLink="/register">signup</a></p>
+      
+       <button [disabled]="loginForm.invalid" type="submit" class="btn btn-info float-end text-white">login</button>
+      
+    
+</form>

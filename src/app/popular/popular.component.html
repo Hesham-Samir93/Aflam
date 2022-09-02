@@ -1,0 +1,37 @@
+<div class="onload">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+<div class="mt-5   owl-carousel owl-theme">
+    
+        
+        <div [routerLink]="['/moviedetail', movie.id ]"  *ngFor="let movie of popularMovies" class="item">
+            <img class="img-fluid   " [src]="imgPrefix+movie.poster_path" alt="">
+        </div>
+   
+</div>
+
+<input [(ngModel)]="term" class="form-control w-50 m-auto bg-transparent my-5 col-md-8" placeholder="search">
+
+<div class="row home ">
+
+
+    <div class="col-md-4">
+        <div class="line w-25 mb-4"></div>
+        <h5 class="text-white">The most Popular<br>Movies <br>to watch now</h5>
+        <p class="text-muted mt-3 mb-4">most popular movies by this week</p>
+        <div class="line "></div>
+    </div>
+    <div [routerLink]="['/moviedetail', movie.id ]" *ngFor="let movie of popularMovies|search:term"
+        class="col-md-2 mb-2">
+        <div class="item position-relative">
+            <img class="img-fluid" [src]="imgPrefix+movie.poster_path" alt="">
+            <h4 class="h6 text-white">{{movie.title}}</h4>
+            <p class="vote ">{{movie.vote_average}}</p>
+
+        </div>
+    </div>
+</div>
